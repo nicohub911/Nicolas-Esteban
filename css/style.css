@@ -1,0 +1,37 @@
+nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 15px);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0px calc(15px/2) 0px calc(15px/2);
+    border-bottom: 2px solid #222222;
+}
+
+.nav_list{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav_list li:hover{
+    color: #fbff00;
+}
+
+.nav_list li a{
+    font-family: "Kalam", cursive;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 1px #222222);
+}
+/*______________HOME______________*/
+.home{
+    width: 100%;
+    background-color: #cccccc;
+    aspect-ratio: 16/6;
+}
