@@ -5,243 +5,628 @@ html{
 
 body{
     background-color: #aaaaaa;
-}
-/*============== Nav ==============*/
-nav{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 50px;
-    padding-left: 20px;
-    background-color: #ffef0e;
-    box-shadow: 0px 0px 5px #000;
-    z-index: 1000;
-}
-nav img{
-    height: 50px;
-    filter: drop-shadow(0px 0px 3px #222222);
-}
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 15px;
-}
-nav a{
-    text-decoration: none;
-    color: #222222;
-    font-size: 25px;
-    font-family: "Bebas Neue", sans-serif;
-    position: relative;
-    transition: color 0.15s;
-}
-nav a::before{
-    content: "";
-    background-color: #222222;
-    width: 0px;
-    height: 3px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    transition:  width 0.15s;
-}
-nav a::after{
-    content: "";
-    background-color: #222222;
-    width: 0px;
-    height: 3px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    transition:  width 0.15s;
-}
-nav a:hover::before{
-    width: 100%;
-}
-nav a:hover::after{
-    width: 100%;
-}
-/*============== Home ==============*/
-.home{
-    margin-top: 70px;
-    width: 100%;
-    background-color: #222222;
-    aspect-ratio: 16/6
-}
-.home__text{
-    padding-right: 30px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    color: #aaaaaa;
-    line-height: 25px;
-    filter: drop-shadow(0px 0px 2px #000);
-}
-.home__text h1{
-    font-size: 50px;
-    font-family: "Bebas Neue", sans-serif;
-}
-.home__text p{
-    font-size: 18px;
-    font-family: sans-serif;
-}
-.home__text span{
-    font-size: 22px;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-.home__text a{
-    text-decoration: none;
-    color: #ffef0e;
-    border: 2px solid #ffef0e;
-    border-radius: 50px;
-    padding: 5px 10px;
-    font-family: sans-serif;
-    font-size: 16px;
-    margin-top: 25px;
-    transition: color 0.15s, background-color 0.15s;
-}
-.home__text a:hover{
-    background-color: #ffef0e;
-    color: #222222;
-}
-/*============== About ==============*/
-.about{
-    width: 100%;
-    padding: 20px;
-}
-.about__stars{
-    background-color: #222222;
-    padding: 20px 0px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 0px 0px 10px #000;
-    position: relative;
-    overflow: hidden;
-}
-.about__stars img{
-    width: 35%;
-    background-color: #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #000;
-    z-index: 10;
-}
-.about__stars__containerText{
-    width: 35%;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: rgba(34, 34, 34,0.5);
-    z-index: 10;
-}
-.about__stars__containerText__title{
-    color: #ccc;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 25px;
     text-align: center;
-    filter: drop-shadow(0px 0px 2px #000);
+    text-align: -webkit-center;
+    background-image: url(../img/background.webp);
 }
-.about__stars__containerText__text{
-    color: #ccc;
-    font-size: 15px;
-    margin: 10px;
-    font-weight: bold;
-    font-family: sans-serif;
-    text-align: justify;
-    background-color: rgba(34, 34, 34, 0.8);
-}
-.particles{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-/*============== Portfolio ==============*/
-.portfolio{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color: #222222;
-    width: calc(100% - 40px);
-    min-height: 500px;
-    padding: 25px 15px;
-    margin: 50px 20px 0px 20px;
-    border-radius: 10px;
-}
-.pag_default_style{
-    width: 300px;
-    height: 170px;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px #000;
-}
-.pag_svg_default_style{
-    width: 40px;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    filter: drop-shadow(0px 0px 5px #000);
-}
-.portfolio__pagJS{
-    border-top: 8px groove #ffd000;
-    border-left: 8px groove #ffd000;
-}
-.portfolio__pagJS svg{
-    background-color: #222222;
-}
-.portfolio__pagBOOTSRAP{
-    border-top: 8px groove #993abb;
-    border-left: 8px groove #993abb;
-}
-.portfolio__pagBOOTSRAP svg{
-    background-color: #222222;
-    border-radius: 3px;
-}
-.portfolio__pagREACT{
-    border-top: 8px groove #18bedb;
-    border-left: 8px groove #18bedb;
-}
-.portfolio__pagREACT svg{
-    background-color: #18bedb;
-    border-radius: 5px;
-}
-.portfolio__pagSASS{
-    border-top: 8px groove #ff86bfc9;
-    border-left: 8px groove #ff86bfc9;
-}
-.portfolio__pagTAILWIND{
-    border-top: 8px groove #6070ffc9;
-    border-left: 8px groove #6070ffc9;
-}
-.portfolio__pagTAILWIND svg{
-    background-color: #6070ffc9;
-    border-radius: 5px;
-    padding: 3px;
-}
-.portfolio__pagCSS{
-    border-top: 8px groove #0077ffc9;
-    border-left: 8px groove #0077ffc9;
-}
-.portfolio__pagCSS svg{
-    background-color: #0077ffc9;
-    border-radius: 5px;
-    padding: 3px;
-}
+@media only screen and (max-width: 720px) {
 
+    /*============== Nav ==============*/
+    nav{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 10px;
+        background-color: #ffef0e;
+        box-shadow: 0px 0px 5px #000;
+        overflow: hidden;
+        transition: height 0.3s;
+        z-index: 1000;
+    }
+    nav img{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul button{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    nav ul svg{
+        width: 50px;
+        height: 50px;
+    }
+    nav a{
+        text-decoration: none;
+        color: #222222;
+        font-size: 25px;
+        font-family: "Bebas Neue", sans-serif;
+        position: relative;
+        transition: color 0.15s;
+    }
+    nav a::before{
+        content: "";
+        background-color: #222222;
+        width: 0px;
+        height: 3px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition:  width 0.15s;
+    }
+    nav a::after{
+        content: "";
+        background-color: #222222;
+        width: 0px;
+        height: 3px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        transition:  width 0.15s;
+    }
+    nav a:hover::before{
+        width: 100%;
+    }
+    nav a:hover::after{
+        width: 100%;
+    }
+    /*============== Home ==============*/
+    .home{
+        margin-top: 70px;
+        width: 100%;
+        background-color: #222222;
+        aspect-ratio: 16/9;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px #222;
+    }
+    .home__img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .mountain{
+        z-index: 10;
+    }
+    .person{
+        top: 90px;
+        left: 100px;
+        z-index: 20;
+    }
+    .home__text{
+        padding-right: 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(34, 34, 34, 0.6);
+        flex-direction: column;
+        color: #aaaaaa;
+        line-height: 15px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: drop-shadow(0px 0px 2px #000);
+        z-index: 100;
+    }
+    .home__text h1{
+        font-size: 40px;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    .home__text p{
+        font-size: 12px;
+        font-family: sans-serif;
+    }
+    .home__text span{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .home__text a{
+        display: none;
+    }
+    .home__text a:hover{
+        background-color: #ffef0e;
+        color: #222222;
+    }
+    /*============== About ==============*/
+    .about{
+        width: 100%;
+        max-width: 1100px;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    .about__stars{
+        background-color: #222222;
+        padding: 20px 0px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0px 0px 10px #000;
+        position: relative;
+        overflow: hidden;
+    }
+    .about__stars img{
+        display: none;
+    }
+    .about__stars__containerText{
+        width: 310px;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: rgba(34, 34, 34,0.5);
+        z-index: 10;
+    }
+    .about__stars__containerText__title{
+        color: #ccc;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 25px;
+        text-align: center;
+        filter: drop-shadow(0px 0px 2px #000);
+    }
+    .about__stars__containerText__text{
+        color: #ccc;
+        font-size: 15px;
+        margin: 10px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-align: justify;
+        background-color: rgba(34, 34, 34, 0.8);
+    }
+    .particles{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    /*============== Portfolio ==============*/
+    .portfolio{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: calc(100% - 40px);
+        max-width: 1350px;
+        min-height: 500px;
+        padding: 25px 15px;
+        margin: 30px 20px 0px 20px;
+        border-radius: 10px;
+    }
+    .pag_default_style{
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        flex-grow: 1;
+        flex-basis: 25%;
+        max-width: 50%;
+        min-width: 250px;
+        aspect-ratio: 16/9;
+        background-color: #222222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pag_default_style svg{
+        z-index: 2;
+    }
+    .pag_default_style:hover > a{
+        opacity: 1;
+    }
+    .pag_default_style:hover > img{
+        opacity: 0.4;
+    }
+    .pag_svg_default_style{
+        width: 40px;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        filter: drop-shadow(0px 0px 5px #000);
+    }
+    .portfolio__pagJS{
+        border-top: 8px groove #ffd000;
+        border-left: 8px groove #ffd000;
+    }
+    .portfolio__pagJS svg{
+        background-color: #222222;
+    }
+    .portfolio__pagBOOTSRAP{
+        border-top: 8px groove #993abb;
+        border-left: 8px groove #993abb;
+    }
+    .portfolio__pagBOOTSRAP svg{
+        background-color: #222222;
+        border-radius: 3px;
+        border-radius: 10px;
+    }
+    .portfolio__pagREACT{
+        border-top: 8px groove #18bedb;
+        border-left: 8px groove #18bedb;
+    }
+    .portfolio__pagREACT svg{
+        background-color: #18bedb;
+        border-radius: 5px;
+    }
+    .portfolio__pagSASS{
+        border-top: 8px groove #ff86bfc9;
+        border-left: 8px groove #ff86bfc9;
+    }
+    .portfolio__pagTAILWIND{
+        border-top: 8px groove #6070ffc9;
+        border-left: 8px groove #6070ffc9;
+    }
+    .portfolio__pagTAILWIND svg{
+        background-color: #6070ffc9;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .portfolio__pagCSS{
+        border-top: 8px groove #0077ffc9;
+        border-left: 8px groove #0077ffc9;
+    }
+    .portfolio__pagCSS svg{
+        background-color: #0077ffc9;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .portfolio__pag__button{
+        text-decoration: none;
+        color: #000;
+        font-size: 17px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: #ffef0e;
+        padding: 5px 15px;
+        border-radius: 15px 2px;
+        box-shadow: 0px 0px 5px #000;
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 0.2s;
+    }
+    .portfolio__pag__button:hover{
+        background-color: #ffe600;
+        box-shadow: 0px 0px 5px #fff;
+    }
+    .portfolio__pag__img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 5px 0px;
+        z-index: 0;
+        transition: opacity 0.3s;
+    }
 
+}
+@media only screen and (min-width: 721px) {
 
+    /*============== Nav ==============*/
+    nav{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 50px;
+        padding-left: 20px;
+        background-color: #ffef0e;
+        box-shadow: 0px 0px 5px #000;
+        z-index: 1000;
+    }
+    nav img{
+        height: 50px;
+        filter: drop-shadow(0px 0px 3px #222222);
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        gap: 15px;
+    }
+    nav ul button{
+        display: none;
+    }
+    nav a{
+        text-decoration: none;
+        color: #222222;
+        font-size: 25px;
+        font-family: "Bebas Neue", sans-serif;
+        position: relative;
+        transition: color 0.15s;
+    }
+    nav a::before{
+        content: "";
+        background-color: #222222;
+        width: 0px;
+        height: 3px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition:  width 0.15s;
+    }
+    nav a::after{
+        content: "";
+        background-color: #222222;
+        width: 0px;
+        height: 3px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        transition:  width 0.15s;
+    }
+    nav a:hover::before{
+        width: 100%;
+    }
+    nav a:hover::after{
+        width: 100%;
+    }
+    /*============== Home ==============*/
+    .home{
+        margin-top: 70px;
+        width: 100%;
+        background-color: #222222;
+        aspect-ratio: 16/6;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px #222;
+    }
+    .home__img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .mountain{
+        z-index: 10;
+    }
+    .person{
+        top: 100px;
+        left: 130px;
+        z-index: 20;
+    }
+    .home__text{
+        padding-right: 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        color: #aaaaaa;
+        line-height: 25px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: drop-shadow(0px 0px 2px #000);
+        z-index: 100;
+    }
+    .home__text h1{
+        font-size: 50px;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    .home__text p{
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+    .home__text span{
+        font-size: 22px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .home__text a{
+        text-decoration: none;
+        color: #ffef0e;
+        border: 2px solid #ffef0e;
+        border-radius: 50px;
+        padding: 5px 10px;
+        font-family: sans-serif;
+        font-size: 16px;
+        margin-top: 25px;
+        transition: color 0.15s, background-color 0.15s;
+    }
+    .home__text a:hover{
+        background-color: #ffef0e;
+        color: #222222;
+    }
+    /*============== About ==============*/
+    .about{
+        width: 100%;
+        max-width: 1100px;
+        padding: 20px;
+        margin-top: 100px;
+    }
+    .about__stars{
+        background-color: #222222;
+        padding: 20px 0px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0px 0px 10px #000;
+        position: relative;
+        overflow: hidden;
+    }
+    .about__stars img{
+        width: auto;
+        max-height: 500px;
+        background-color: #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px #000;
+        z-index: 10;
+    }
+    .about__stars__containerText{
+        width: 310px;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: rgba(34, 34, 34,0.5);
+        z-index: 10;
+    }
+    .about__stars__containerText__title{
+        color: #ccc;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 25px;
+        text-align: center;
+        filter: drop-shadow(0px 0px 2px #000);
+    }
+    .about__stars__containerText__text{
+        color: #ccc;
+        font-size: 15px;
+        margin: 10px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-align: justify;
+        background-color: rgba(34, 34, 34, 0.8);
+    }
+    .particles{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    /*============== Portfolio ==============*/
+    .portfolio{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: calc(100% - 40px);
+        max-width: 1350px;
+        min-height: 500px;
+        padding: 25px 15px;
+        margin: 150px 20px 0px 20px;
+        border-radius: 10px;
+    }
+    .pag_default_style{
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        flex-grow: 1;
+        flex-basis: 25%;
+        max-width: 50%;
+        aspect-ratio: 16/9;
+        background-color: #222222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pag_default_style svg{
+        z-index: 2;
+    }
+    .pag_default_style:hover > a{
+        opacity: 1;
+    }
+    .pag_default_style:hover > img{
+        opacity: 0.4;
+    }
+    .pag_default_style:hover > svg{
+        transform: rotateY(360deg);
+    }
+    .pag_svg_default_style{
+        width: 40px;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        filter: drop-shadow(0px 0px 5px #000);
+        transition: transform 0.5s;
+    }
+    .portfolio__pagJS{
+        border-top: 8px groove #ffd000;
+        border-left: 8px groove #ffd000;
+    }
+    .portfolio__pagJS svg{
+        background-color: #222222;
+    }
+    .portfolio__pagBOOTSRAP{
+        border-top: 8px groove #993abb;
+        border-left: 8px groove #993abb;
+    }
+    .portfolio__pagBOOTSRAP svg{
+        background-color: #222222;
+        border-radius: 3px;
+        border-radius: 10px;
+    }
+    .portfolio__pagREACT{
+        border-top: 8px groove #18bedb;
+        border-left: 8px groove #18bedb;
+    }
+    .portfolio__pagREACT svg{
+        background-color: #18bedb;
+        border-radius: 5px;
+    }
+    .portfolio__pagSASS{
+        border-top: 8px groove #ff86bfc9;
+        border-left: 8px groove #ff86bfc9;
+    }
+    .portfolio__pagTAILWIND{
+        border-top: 8px groove #6070ffc9;
+        border-left: 8px groove #6070ffc9;
+    }
+    .portfolio__pagTAILWIND svg{
+        background-color: #6070ffc9;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .portfolio__pagCSS{
+        border-top: 8px groove #0077ffc9;
+        border-left: 8px groove #0077ffc9;
+    }
+    .portfolio__pagCSS svg{
+        background-color: #0077ffc9;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    .portfolio__pag__button{
+        text-decoration: none;
+        color: #000;
+        font-size: 17px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: #ffef0e;
+        padding: 5px 15px;
+        border-radius: 15px 2px;
+        box-shadow: 0px 0px 5px #000;
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 0.2s;
+    }
+    .portfolio__pag__button:hover{
+        box-shadow: 0px 0px 5px #fff;
+    }
+    .portfolio__pag__img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 5px 0px;
+        z-index: 0;
+        transition: opacity 0.3s;
+    }
 
+}
 
 
 
@@ -249,13 +634,18 @@ nav a:hover::after{
 /*============== Footer ==============*/
 .footer{
     width: 100%;
-    height: 250px;
+    height: 180px;
     background-color: #ffef0e;
     position: relative;
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
+    align-items: center;
+    margin-top: 150px;
     box-shadow: 0px 0px 6px #000;
+}
+.footer__link svg{
+    width: 30px;
+    height: 30px;
 }
 .footer__btnToTop{
     width: 50px;
